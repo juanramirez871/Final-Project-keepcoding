@@ -5,7 +5,7 @@ from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
 from typing import Optional
 from models import RAGResponse, KnowledgeResponse, TTSSuccessResponse, AssistantResponse
-from services import generate_response_from_model
+from services import generate_response_from_model, get_internal_knowledge
 from config import collection, embed_model, SYSTEM_PROMPT
 from memory import ConversationStore
 from tts import generar_audio
@@ -126,28 +126,11 @@ def get_knowledge(query: str = "", n_results: int = 5):
 @app.get("/rag_session", response_model=RAGResponse)
 def rag_session(query: str, session_id: str = "default", max_tokens: Optional[int] = 1000000, top_k: int = 3):
     try:
-        q_emb = embed_model.encode([query])
-
-        if hasattr(q_emb, "tolist"):
-            q_emb = q_emb.tolist()
-        if not isinstance(q_emb[0], (list, tuple)):
-            q_embs = [q_emb]
-        else:
-            q_embs = q_emb
-
-        results = collection.query(query_embeddings=q_embs, n_results=top_k)
-
-        docs = results.get("documents")
-        if isinstance(docs, list) and len(docs) > 0 and isinstance(docs[0], list):
-            docs = docs[0]
-
-        knowledge_text = ""
-        if docs:
-            knowledge_text = "\n\n--- Conocimiento interno ---\n"
-            for i, d in enumerate(docs[:top_k], 1):
-                knowledge_text += f"[{i}] {d}\n"
-
         history = conv_store.get_history(session_id)
+        knowledge_text = ""
+        if history:
+            knowledge_text = get_internal_knowledge(query, top_k)
+
         conv_store.add_user_message(session_id, query)
         result = generate_response_from_model(
             prompt=query,
@@ -187,26 +170,11 @@ def tts(text: str):
 @app.get("/assistant", response_model=AssistantResponse)
 def assistant(query: str, session_id: str = "default", max_tokens: Optional[int] = 100, top_k: int = 3):
     try:
-        q_emb = embed_model.encode([query])
-        if hasattr(q_emb, "tolist"):
-            q_emb = q_emb.tolist()
-        if not isinstance(q_emb[0], (list, tuple)):
-            q_embs = [q_emb]
-        else:
-            q_embs = q_emb
-
-        results = collection.query(query_embeddings=q_embs, n_results=top_k)
-        docs = results.get("documents")
-        if isinstance(docs, list) and len(docs) > 0 and isinstance(docs[0], list):
-            docs = docs[0]
-
-        knowledge_text = ""
-        if docs:
-            knowledge_text = "\n\n--- Conocimiento interno ---\n"
-            for i, d in enumerate(docs[:top_k], 1):
-                knowledge_text += f"[{i}] {d}\n"
-
         history = conv_store.get_history(session_id)
+        knowledge_text = ""
+        if history:
+            knowledge_text = get_internal_knowledge(query, top_k)
+
         conv_store.add_user_message(session_id, query)
         result = generate_response_from_model(
             prompt=query,
