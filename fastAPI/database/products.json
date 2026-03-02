@@ -1,268 +1,302 @@
 [
-
-    {
-        "name": "Pasta dental 200g (x 5 Unidades)",
-        "description": "Pasta dental con flúor para una sonrisa saludable. Fórmula suave que protege contra las caries y refresca el aliento. Ideal para toda la familia.",
-        "price": 30.000
-    },
-    {
-        "name": "Crema no Láctea (x50 sobres)",
-        "description": "Crema no láctea para personas con intolerancia a la lactosa. Ideal para quienes buscan una alternativa saludable.",
-        "price": 25.000
-    },
-    {
-        "name": "Pasta dental 50g (x 4 unidades)",
-        "description": "Pasta dental con flúor para una sonrisa saludable. Fórmula suave que protege contra las caries y refresca el aliento. Ideal para toda la familia.",
-        "price": 15.000
-    },
-    {
-        "name": "Protector Solar Beige (x1)",
-        "description": "Protector solar con tono beige que se adapta a tu piel. Ofrece protección contra los rayos UV mientras unifica el tono de tu piel. Ideal para uso diario.",
-        "price": 40.000
-    },
-    {
-        "name": "Cepillo Dental (8 unidades)",
-        "description": "Cepillo dental de cerdas suaves para una limpieza efectiva. Diseño ergonómico que se adapta a tu mano. Ideal para mantener una buena higiene bucal.",
-        "price": 20.000
-    },
-    {
-        "name": "E-Omega 3 (x 180 Cápsulas)",
-        "description": "Suplemento de Omega 3 para apoyar la salud cardiovascular y cerebral. Contiene ácidos grasos esenciales que promueven el bienestar general. Ideal para quienes buscan mejorar su salud con un suplemento de alta calidad.",
-        "price": 60.000
-    },
-    {
-        "name": "Detergente Lavatrastes",
-        "description": "Detergente lavatrastes de alta eficacia para eliminar la grasa y los residuos de alimentos. Fórmula concentrada que deja tus platos limpios y brillantes. Ideal para uso diario en el hogar.",
-        "price": 10.000
-    },
-    {
-        "name": "Detergente en Polvo para Ropa (x 2 unidades)",
-        "description": "Detergente en polvo para ropa con fórmula potente que elimina las manchas difíciles. Ideal para mantener tus prendas limpias y frescas. Perfecto para uso en lavadoras de carga frontal y superior.",
-        "price": 35.000
-    },
-    {
-        "name": "HemoHIM (X60 sobres)",
-        "description": "Suplemento HemoHIM para fortalecer el sistema inmunológico. Contiene ingredientes naturales que ayudan a mejorar la resistencia del cuerpo. Ideal para quienes buscan un impulso adicional a su salud y bienestar.",
-        "price": 50.000
-    },
-    {
-        "name": "Shampoo Herbal para Cabello",
-        "description": "Shampoo herbal natural para cabello suave y saludable. Fórmula con ingredientes naturales que nutren y fortalecen el cabello. Ideal para uso diario.",
-        "price": 25.000
-    },
-    {
-        "name": "Sistema de Cuidado Bucal (x 4 kits)",
-        "description": "Sistema de cuidado bucal completo que incluye cepillo dental, pasta dental y enjuague bucal. Fórmula avanzada para una limpieza profunda y protección contra las caries. Ideal para mantener una sonrisa saludable y fresca.",
-        "price": 45.000
-    },
-    {
-        "name": "Espuma Limpiadora - Paso 2",
-        "description": "Espuma limpiadora suave para una limpieza profunda de la piel. Fórmula hidratante que elimina impurezas y deja la piel fresca y revitalizada. Ideal para uso diario en todo tipo de piel.",
-        "price": 30.000
-    },
-    {
-        "name": "Crema BB (x 1 unidad)",
-        "description": "Crema BB con protección solar y cobertura uniforme. Fórmula ligera que hidrata y protege la piel. Ideal para un acabado natural y saludable.",
-        "price": 35.000
-    },
-    {
-        "name": "Protector Solar Blanco (x1)",
-        "description": "Protector solar con fórmula blanca que ofrece una protección efectiva contra los rayos UV. Ideal para uso diario, protege tu piel mientras mantiene un acabado natural.",
-        "price": 40.000
-    },
-    {
-        "name": "Aidam Limpiador Íntimo Unisex (x 1 unidad)",
-        "description": "Limpiador íntimo unisex con fórmula suave y equilibrada. Ideal para mantener la higiene íntima diaria, proporcionando frescura y cuidado para ambos géneros.",
-        "price": 20.000
-    },
-    {
-        "name": "Atomy Absolute Protector Solar",
-        "description": "Protector solar de alta calidad con fórmula avanzada que ofrece una protección efectiva contra los rayos UV. Ideal para uso diario, protege tu piel mientras mantiene un acabado natural.",
-        "price": 45.000
-    },
-    {
-        "name": "Cuidado Nocturno 4 Pasos (1 Set)",
-        "description": "Set de cuidado nocturno con 4 pasos para una piel revitalizada. Incluye limpiador, tónico, suero y crema hidratante. Fórmula avanzada para una rutina de cuidado nocturno completa y efectiva.",
-        "price": 60.000
-    },
-    {
-        "name": "Limpiador Herbal para Cuerpo",
-        "description": "Limpiador herbal natural para cuerpo suave y refrescante. Fórmula con ingredientes naturales que nutren y revitalizan la piel. Ideal para uso diario.",
-        "price": 25.000
-    },
-    {
-        "name": "Atomy Scratch Free Scrubber",
-        "description": "Esponja de limpieza sin rayas para una limpieza efectiva. Ideal para eliminar la suciedad y los residuos sin dañar las superficies. Perfecta para uso en la cocina y el hogar.",
-        "price": 15.000
-    },
-    {
-        "name": "Oleo Esencial para el Cabello",
-        "description": "Aceite esencial para el cabello que nutre y fortalece. Fórmula con ingredientes naturales que promueven un cabello saludable y brillante. Ideal para uso diario o como tratamiento intensivo.",
-        "price": 30.000
-    },
-    {
-        "name": "Atomy Té Puer (X 30 sobres)",
-        "description": "Té Puer de alta calidad con sabor auténtico. Ideal para disfrutar de una bebida saludable y reconfortante. Perfecto para quienes buscan una opción de té tradicional con beneficios para la salud.",
-        "price": 20.000
-    },
-    {
-        "name": "Guantes de látex (M) *2 pares",
-        "description": "Guantes de látex de tamaño mediano para protección y comodidad. Ideales para tareas de limpieza, cuidado personal o cualquier actividad que requiera protección de las manos.",
-        "price": 10.000
-    },
-    {
-        "name": "Jabón de Manos (x 1 unidad)",
-        "description": "Jabón de manos suave y efectivo para una limpieza profunda. Fórmula hidratante que deja las manos limpias y suaves. Ideal para uso diario en el hogar o en la oficina.",
-        "price": 15.000
-    },
-    {
-        "name": "Detergente Líquido para Ropa",
-        "description": "Detergente líquido para ropa con fórmula potente que elimina las manchas difíciles. Ideal para mantener tus prendas limpias y frescas. Perfecto para uso en lavadoras de carga frontal y superior.",
-        "price": 30.000
-    },
-    {
-        "name": "Atomy Sun Stick",
-        "description": "Protector solar en formato stick para una aplicación fácil y rápida. Fórmula avanzada que ofrece una protección efectiva contra los rayos UV. Ideal para uso diario, protege tu piel mientras mantiene un acabado natural.",
-        "price": 25.000
-    },
-    {
-        "name": "Atomy Fibra Psyllium Husk (x 45 sobres)",
-        "description": "Fibra Psyllium Husk de alta calidad para apoyar la salud digestiva. Contiene fibra soluble que ayuda a mejorar la digestión y promover la regularidad intestinal. Ideal para quienes buscan una opción natural para mejorar su salud digestiva.",
-        "price": 35.000
-    },
-    {
-        "name": "Atomy Absolute Hydra Balm",
-        "description": "Bálsamo hidratante de alta calidad con fórmula avanzada que proporciona una hidratación profunda y duradera. Ideal para pieles secas y sensibles, ayuda a mantener la piel suave y protegida durante todo el día.",
-        "price": 40.000
-    },
-    {
-        "name": "Esencia para Rizos",
-        "description": "Esencia para rizos que define y nutre el cabello rizado. Fórmula con ingredientes naturales que promueven rizos saludables y brillantes. Ideal para uso diario o como tratamiento intensivo para el cabello rizado.",
-        "price": 30.000
-    },
-    {
-        "name": "Mascarilla Peel-Off - Paso 4",
-        "description": "Mascarilla peel-off para una piel revitalizada. Fórmula avanzada que ayuda a eliminar impurezas y células muertas, dejando la piel fresca y renovada. Ideal para uso semanal como parte de tu rutina de cuidado de la piel.",
-        "price": 35.000
-    },
-    {
-        "name": "Atomy Shampoo de Proteína",
-        "description": "Shampoo de proteína de alta calidad para cabello fuerte y saludable. Fórmula con ingredientes naturales que nutren y fortalecen el cabello. Ideal para uso diario, ayuda a mantener un cabello saludable y brillante.",
-        "price": 30.000
-    },
-    {
-        "name": "Gel de Manzana Verde (x28 sobres)",
-        "description": "Gel de manzana verde de alta calidad para un cuidado natural del cabello. Fórmula con ingredientes naturales que nutren y revitalizan el cabello. Ideal para uso diario o como tratamiento intensivo para mantener un cabello saludable y brillante.",
-        "price": 25.000
-    },
-    {
-        "name": "Aceite de Aguacate Extra Virgen",
-        "description": "Aceite de aguacate extra virgen de alta calidad para el cuidado de la piel y el cabello. Rico en nutrientes y antioxidantes, ideal para hidratar y nutrir la piel seca y el cabello dañado. Perfecto para uso diario como parte de tu rutina de cuidado personal.",
-        "price": 40.000
-    },
-    {
-        "name": "Gel Exfoliante - Paso 3",
-        "description": "Gel exfoliante suave para una piel renovada. Fórmula avanzada que ayuda a eliminar las células muertas y las impurezas, dejando la piel fresca y revitalizada. Ideal para uso semanal como parte de tu rutina de cuidado de la piel.",
-        "price": 30.000
-    },
-    {
-        "name": "Hierro (x60 sobres)",
-        "description": "Suplemento de hierro de alta calidad para apoyar la salud sanguínea. Contiene hierro elemental que ayuda a prevenir la anemia y mejorar la energía. Ideal para quienes buscan una opción de suplemento de hierro efectiva y fácil de tomar.",
-        "price": 25.000
-    },
-    {
-        "name": "The Fame Crema para Ojos - Paso 2",
-        "description": "Crema para ojos de alta calidad con fórmula avanzada que ayuda a reducir las líneas finas y mejorar la textura de la piel. Ideal para uso diario como parte de tu rutina de cuidado facial.",
-        "price": 15.000
-    },
-    {
-        "name": "Delineador de Cejas [Café]",
-        "description": "Delineador de cejas en tono café para definir y realzar tus cejas. Fórmula de larga duración que se mantiene en su lugar durante todo el día. Ideal para un look natural y definido.",
-        "price": 5.000
-    },
-    {
-        "name": "Crema de Manos",
-        "description": "Crema de manos hidratante y nutritiva para mantener tus manos suaves y protegidas. Fórmula con ingredientes naturales que ayudan a reparar y proteger la piel seca. Ideal para uso diario, especialmente en climas fríos o secos.",
-        "price": 17.000
-    },
-    {
-        "name": "Adelica Máscara de Pestañas Volumen",
-        "description": "Máscara de pestañas de alta calidad para un volumen intenso. Fórmula avanzada que ayuda a alargar y definir las pestañas, proporcionando un look dramático y duradero. Ideal para uso diario o para ocasiones especiales.",
-        "price": 20.000
-    },
-    {
-        "name": "Cepillo Dental Niños (8 unidades)",
-        "description": "Cepillo dental de niños de alta calidad con cerdas suaves para una limpieza efectiva y segura. Ideal para niños pequeños que están aprendiendo a cepillarse los dientes.",
-        "price": 15.000
-    },
-    {
-        "name": "Acondicionador Herbal para Cabello",
-        "description": "Acondicionador herbal natural para cabello suave y saludable. Fórmula con ingredientes naturales que nutren y fortalecen el cabello. Ideal para uso diario después del shampoo para mantener un cabello saludable y brillante.",
-        "price": 25.000
-    },
-    {
-        "name": "Pasta Dental Sensitive (x 3 unidades)",
-        "description": "Pasta dental para dientes sensibles con fórmula suave que protege contra las caries y alivia la sensibilidad dental. Ideal para personas con dientes sensibles que buscan una opción de cuidado bucal efectiva y suave.",
-        "price": 60.000
-    },
-    {
-        "name": "Atomy Spirulina & SOD",
-        "description": "Suplemento de Spirulina y SOD de alta calidad para apoyar la salud general. Contiene ingredientes naturales que ayudan a mejorar la energía, fortalecer el sistema inmunológico y promover el bienestar general. Ideal para quienes buscan una opción de suplemento natural para mejorar su salud y vitalidad.",
-        "price": 50.000
-    },
-    {
-        "name": "Suavizante de Telas",
-        "description": "Suavizante de telas de alta calidad para mantener tus prendas suaves y frescas. Fórmula avanzada que ayuda a reducir la estática y dejar un aroma agradable en tu ropa. Ideal para uso en lavadoras de carga frontal y superior.",
-        "price": 20.000
-    },
-    {
-        "name": "Bálsamo Labial",
-        "description": "Bálsamo labial hidratante y nutritivo para mantener tus labios suaves y protegidos. Fórmula con ingredientes naturales que ayudan a reparar y proteger la piel seca de los labios. Ideal para uso diario, especialmente en climas fríos o secos.",
-        "price": 10.000
-    },
-    {
-        "name": "Limpiador Profundo - Paso 1",
-        "description": "Limpiador profundo de alta calidad para una piel limpia y fresca. Fórmula avanzada que ayuda a eliminar las impurezas y el exceso de grasa, dejando la piel revitalizada y preparada para los siguientes pasos de tu rutina de cuidado de la piel. Ideal para uso diario como parte de tu rutina de cuidado facial.",
-        "price": 25.000
-    },
-    {
-        "name": "Atomy Esponjillas de Acero Inoxidable (x2 unidades)",
-        "description": "Esponjillas de acero inoxidable de alta calidad para una limpieza efectiva. Ideal para eliminar la suciedad y los residuos sin dañar las superficies. Perfectas para uso en la cocina y el hogar, estas esponjillas son duraderas y fáciles de limpiar, proporcionando una solución de limpieza eficiente y ecológica.",
-        "price": 15.000
-    },
-    {
-        "name": "Loción Corporal",
-        "description": "Loción corporal hidratante y nutritiva para mantener tu piel suave y protegida. Fórmula con ingredientes naturales que ayudan a reparar y proteger la piel seca. Ideal para uso diario, especialmente en climas fríos o secos.",
-        "price": 30.000
-    },
-    {
-        "name": "Café Arábica Black (x80 sobres)",
-        "description": "Café Arábica Black de alta calidad con sabor intenso y aroma delicioso. Ideal para disfrutar de una taza de café de calidad en cualquier momento del día. Perfecto para quienes buscan una opción de café premium con un sabor auténtico y rico.",
-        "price": 40.000
-    },
-    {
-        "name": "Atomy Tónico para Cabello",
-        "description": "Tónico para cabello de alta calidad para fortalecer y revitalizar el cabello. Fórmula con ingredientes naturales que nutren el cuero cabelludo y promueven un cabello saludable y brillante. Ideal para uso diario después del shampoo para mantener un cabello saludable y fuerte.",
-        "price": 30.000
-    },
-    {
-        "name": "Brillo Labial",
-        "description": "Brillo labial hidratante y nutritivo para mantener tus labios suaves y protegidos. Fórmula con ingredientes naturales que ayudan a reparar y proteger la piel seca de los labios, proporcionando un brillo saludable y atractivo. Ideal para uso diario, especialmente en climas fríos o secos.",
-        "price": 12.000
-    },
-    {
-        "name": "Atomy Loción de protección Solar",
-        "description": "Loción de protección solar de alta calidad con fórmula avanzada que ofrece una protección efectiva contra los rayos UV. Ideal para uso diario, protege tu piel mientras mantiene un acabado natural y saludable. Perfecta para quienes buscan una opción de protector solar confiable y fácil de aplicar.",
-        "price": 35.000
-    },
-    {
-        "name": "Tratamiento Herbal para Cabello",
-        "description": "Tratamiento herbal natural para cabello suave y saludable. Fórmula con ingredientes naturales que nutren y fortalecen el cabello. Ideal para uso diario o como tratamiento intensivo para mantener un cabello saludable y brillante.",
-        "price": 30.000
-    },
-    {
-        "name": "Fermento de Noni Concentrado",
-        "description": "Fermento de Noni concentrado de alta calidad para un cuidado natural del cabello. Fórmula con ingredientes naturales que fortalecen y nutren el cabello, promoviendo un crecimiento saludable y brillante. Ideal para uso diario o como tratamiento intensivo.",
-        "price": 25.000
-    }
+  {
+    "id": 1,
+    "name": "Nevera No Frost 300L",
+    "description": "Refrigerador con sistema No Frost y ahorro energético A+",
+    "price": 1850000
+  },
+  {
+    "id": 2,
+    "name": "Lavadora Automática 18kg",
+    "description": "Lavadora de carga superior con múltiples programas de lavado",
+    "price": 1450000
+  },
+  {
+    "id": 3,
+    "name": "Secadora Eléctrica 15kg",
+    "description": "Secadora con sensor de humedad y ciclos rápidos",
+    "price": 1350000
+  },
+  {
+    "id": 4,
+    "name": "Estufa a Gas 4 Puestos",
+    "description": "Estufa con horno a gas y encendido eléctrico",
+    "price": 780000
+  },
+  {
+    "id": 5,
+    "name": "Horno Microondas 1.1ft",
+    "description": "Microondas digital con función grill",
+    "price": 420000
+  },
+  {
+    "id": 6,
+    "name": "Licuadora 700W",
+    "description": "Licuadora de alta potencia con vaso de vidrio",
+    "price": 180000
+  },
+  {
+    "id": 7,
+    "name": "Aspiradora 1600W",
+    "description": "Aspiradora ciclónica sin bolsa de alto rendimiento",
+    "price": 390000
+  },
+  {
+    "id": 8,
+    "name": "Televisor Smart TV 50\"",
+    "description": "Smart TV 4K UHD con sistema Android",
+    "price": 2100000
+  },
+  {
+    "id": 9,
+    "name": "Televisor Smart TV 32\"",
+    "description": "Smart TV HD con conectividad WiFi",
+    "price": 950000
+  },
+  {
+    "id": 10,
+    "name": "Freidora de Aire 4L",
+    "description": "Air fryer digital con control de temperatura",
+    "price": 320000
+  },
+  {
+    "id": 11,
+    "name": "Cafetera Programable",
+    "description": "Cafetera con temporizador y capacidad para 12 tazas",
+    "price": 210000
+  },
+  {
+    "id": 12,
+    "name": "Sanduchera Antiadherente",
+    "description": "Sanduchera compacta con placas antiadherentes",
+    "price": 95000
+  },
+  {
+    "id": 13,
+    "name": "Plancha a Vapor",
+    "description": "Plancha con golpe de vapor y base cerámica",
+    "price": 150000
+  },
+  {
+    "id": 14,
+    "name": "Ventilador de Torre",
+    "description": "Ventilador silencioso con control remoto",
+    "price": 260000
+  },
+  {
+    "id": 15,
+    "name": "Aire Acondicionado 12000 BTU",
+    "description": "Aire acondicionado inverter frío/calor",
+    "price": 2400000
+  },
+  {
+    "id": 16,
+    "name": "Calentador de Agua 10L",
+    "description": "Calentador a gas de rápida recuperación",
+    "price": 850000
+  },
+  {
+    "id": 17,
+    "name": "Batidora de Pedestal",
+    "description": "Batidora con 6 velocidades y bowl de acero",
+    "price": 480000
+  },
+  {
+    "id": 18,
+    "name": "Extractor de Jugos",
+    "description": "Extractor lento para frutas y verduras",
+    "price": 520000
+  },
+  {
+    "id": 19,
+    "name": "Tostadora 2 Puestos",
+    "description": "Tostadora con control de dorado ajustable",
+    "price": 110000
+  },
+  {
+    "id": 20,
+    "name": "Olla Arrocera 1.8L",
+    "description": "Arrocera eléctrica con función mantener caliente",
+    "price": 170000
+  },
+  {
+    "id": 21,
+    "name": "Congelador Horizontal 200L",
+    "description": "Congelador de bajo consumo energético",
+    "price": 1250000
+  },
+  {
+    "id": 22,
+    "name": "Lavavajillas 12 Servicios",
+    "description": "Lavavajillas con 6 programas de lavado",
+    "price": 2200000
+  },
+  {
+    "id": 23,
+    "name": "Campana Extractora",
+    "description": "Campana de cocina con filtros de carbón",
+    "price": 690000
+  },
+  {
+    "id": 24,
+    "name": "Dispensador de Agua",
+    "description": "Dispensador frío/caliente con gabinete inferior",
+    "price": 540000
+  },
+  {
+    "id": 25,
+    "name": "Humidificador Ultrasónico",
+    "description": "Humidificador silencioso para habitaciones",
+    "price": 190000
+  },
+  {
+    "id": 26,
+    "name": "Deshumidificador 20L",
+    "description": "Deshumidificador con control digital",
+    "price": 980000
+  },
+  {
+    "id": 27,
+    "name": "Cocina Eléctrica Portátil",
+    "description": "Estufa eléctrica de una hornilla",
+    "price": 140000
+  },
+  {
+    "id": 28,
+    "name": "Parrilla Eléctrica",
+    "description": "Parrilla antiadherente para asados interiores",
+    "price": 230000
+  },
+  {
+    "id": 29,
+    "name": "Robot Aspirador",
+    "description": "Aspiradora robot con mapeo inteligente",
+    "price": 1650000
+  },
+  {
+    "id": 30,
+    "name": "Máquina de Coser",
+    "description": "Máquina doméstica con 12 puntadas",
+    "price": 670000
+  },
+  {
+    "id": 31,
+    "name": "Televisor Smart TV 65\"",
+    "description": "Smart TV 4K con HDR y control por voz",
+    "price": 3200000
+  },
+  {
+    "id": 32,
+    "name": "Barra de Sonido",
+    "description": "Sistema de sonido 2.1 con subwoofer",
+    "price": 780000
+  },
+  {
+    "id": 33,
+    "name": "Reproductor Blu-ray",
+    "description": "Reproductor Full HD con conexión HDMI",
+    "price": 350000
+  },
+  {
+    "id": 34,
+    "name": "Cámara de Seguridad WiFi",
+    "description": "Cámara IP con visión nocturna",
+    "price": 290000
+  },
+  {
+    "id": 35,
+    "name": "Cafetera Espresso",
+    "description": "Máquina de espresso con vaporizador de leche",
+    "price": 1250000
+  },
+  {
+    "id": 36,
+    "name": "Horno Eléctrico 60L",
+    "description": "Horno multifunción con temporizador",
+    "price": 680000
+  },
+  {
+    "id": 37,
+    "name": "Purificador de Aire",
+    "description": "Purificador con filtro HEPA",
+    "price": 890000
+  },
+  {
+    "id": 38,
+    "name": "Enfriador de Vinos",
+    "description": "Cava para 12 botellas con control digital",
+    "price": 1100000
+  },
+  {
+    "id": 39,
+    "name": "Televisor Smart TV 43\"",
+    "description": "Smart TV Full HD con apps integradas",
+    "price": 1450000
+  },
+  {
+    "id": 40,
+    "name": "Calefactor Eléctrico",
+    "description": "Calefactor portátil con termostato",
+    "price": 210000
+  },
+  {
+    "id": 41,
+    "name": "Molino de Café Eléctrico",
+    "description": "Molino compacto para café en grano",
+    "price": 130000
+  },
+  {
+    "id": 42,
+    "name": "Picatodo Eléctrico",
+    "description": "Procesador de alimentos multifunción",
+    "price": 350000
+  },
+  {
+    "id": 43,
+    "name": "Hidrolavadora 1400W",
+    "description": "Hidrolavadora de alta presión para exteriores",
+    "price": 720000
+  },
+  {
+    "id": 44,
+    "name": "Termo Eléctrico 30L",
+    "description": "Calentador eléctrico de almacenamiento",
+    "price": 950000
+  },
+  {
+    "id": 45,
+    "name": "Báscula Digital",
+    "description": "Báscula electrónica de precisión",
+    "price": 90000
+  },
+  {
+    "id": 46,
+    "name": "Secador de Cabello Profesional",
+    "description": "Secador con tecnología iónica",
+    "price": 180000
+  },
+  {
+    "id": 47,
+    "name": "Rizador de Cabello",
+    "description": "Rizador cerámico con ajuste de temperatura",
+    "price": 150000
+  },
+  {
+    "id": 48,
+    "name": "Afeitadora Eléctrica",
+    "description": "Afeitadora recargable con cabezales flotantes",
+    "price": 240000
+  },
+  {
+    "id": 49,
+    "name": "Cepillo Eléctrico Dental",
+    "description": "Cepillo recargable con temporizador",
+    "price": 210000
+  },
+  {
+    "id": 50,
+    "name": "Cocina de Inducción",
+    "description": "Estufa de inducción portátil con panel táctil",
+    "price": 480000
+  }
 ]
