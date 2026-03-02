@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>KeepShop - Órdenes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+        }
+
+        .navbar {
+            background-color: #1f2937;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .navbar h1 {
+            font-size: 20px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #60a5fa;
+        }
+
+        .container {
+            padding: 40px;
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+            color: #111827;
+        }
+
+        .orders-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .orders-table thead {
+            background-color: #f6883b;
+            color: white;
+        }
+
+        .orders-table th,
+        .orders-table td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        .orders-table th {
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .orders-table tbody tr {
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .orders-table tbody tr:hover {
+            background-color: #f9fafb;
+        }
+
+        @media (max-width: 768px) {
+            .orders-table th,
+            .orders-table td {
+                font-size: 13px;
+                padding: 10px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <h1>KeepShop</h1>
+        <!-- <ul>
+            <li><a href="#">Órdenes</a></li>
+            <li><a href="#">Productos</a></li>
+        </ul> -->
+    </nav>
+
+    <section class="container">
+        <h2>Órdenes Realizadas</h2>
+
+        <table class="orders-table">
+            <thead>
+                <tr>
+                    <th>Cantidad</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Total</th>
+                    <th>Telefono Cliente</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for order in orders %}
+                <tr>
+                    <td>{{ order.quantity }}</td>
+                    <td>{{ order.product_name }}</td>
+                    <td>{{ order.description }}</td>
+                    <td>${{ order.price }}</td>
+                    <td>{{ order.customer_phone }}</td>
+                    <td>{{ order.date }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+</body>
+</html>

@@ -1,12 +1,15 @@
 import base64
 from pathlib import Path
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.templating import Jinja2Templates
+from fastapi.responses import HTMLResponse
 from typing import Optional
 from models import RAGResponse, KnowledgeResponse, TTSSuccessResponse, AssistantResponse
 from services import generate_response_from_model
 from config import collection, embed_model, SYSTEM_PROMPT
 from memory import ConversationStore
 from tts import generar_audio
+import json
 
 conv_store = ConversationStore()
 app = FastAPI(
@@ -14,6 +17,21 @@ app = FastAPI(
     description="Prueba Final keepcoding :)",
     version="1.0.0"
 )
+
+templates = Jinja2Templates(directory=str(Path(__file__).parent / "templates"))
+
+@app.get("/", response_class=HTMLResponse)
+def read_root(request: Request):
+    
+    orders = []
+    with open("database/orders.json", "r") as f:
+        orders = json.load(f)
+
+    print(orders)
+    return templates.TemplateResponse("index.html", {
+        "request": request,
+        "orders": orders
+    })
 
 
 @app.get("/model_colombiano", response_model=RAGResponse)
