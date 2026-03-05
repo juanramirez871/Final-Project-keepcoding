@@ -8,7 +8,5 @@ chromadb/chroma_db
 chromadb/venv
 .venv
 chromadb/vector_db
-model_tts_finetuning/speecht5_tts_colombian_final
-model_tts_finetuning/speecht5_tts_colombian
-model_tts_finetuning/speaker_embedding.npy
-model_tts_finetuning/dataset_colombian
+model_vits_finetuning/vits_colombian
+model_vits_finetuning/install_dependencies.ipynb
