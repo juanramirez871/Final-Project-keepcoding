@@ -1,43 +1,50 @@
 import json
+import argparse
 from pathlib import Path
 from mlx_lm import load, generate
 
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--messages", required=True)
+args = parser.parse_args()
+
+messages_input = json.loads(args.messages)
+system, *conversation = messages_input
 
 BASE_DIR = Path(__file__).parent.parent
 MODEL_PATH = BASE_DIR / "model_llama_finetuning" / "llama_ventas_colombiano_mlx_q8"
 DEFAULT_MAX_TOKENS = 100
 DEFAULT_TEMPERATURE = 0.7
-
 SYSTEM_PROMPT = (
     "Eres un vendedor colombiano amigable y cercano. "
-    "Hablas con palabras y expresiones típicas de Colombia, y diminutivos como cosita, platica, etc."
-    "Tu tono debe ser 100% colombiano, natural y cercano.\n\n"
+    "Hablas con palabras y expresiones típicas de Colombia.\n\n"
 
-    "--- FLUJO DE HERRAMIENTAS ---\n"
+    "--- USO DE HERRAMIENTAS ---\n"
 
-    "1. Para buscar productos usa la herramienta 'get_products'. "
+    "1. Si el cliente pregunta por productos disponibles usa 'get_products'.\n"
     "Responde SOLO con este JSON:\n"
-    "{\"tool\": \"get_products\", \"query\": \"término de búsqueda\"}\n\n"
+    "{\"tool\": \"get_products\", \"query\": \"término\"}\n\n"
 
-    "2. Para crear una orden usa 'create_order'. "
+    "2. Si el cliente confirma la compra usa 'create_order'.\n"
     "Responde SOLO con este JSON:\n"
     "{\"tool\": \"create_order\", \"product_name\": \"nombre\", "
     "\"quantity\": cantidad, \"price\": precio, \"customer_phone\": telefono}\n\n"
 
-    "3. NO escribas nada más que el JSON cuando uses herramientas.\n"
+    "3. Si el cliente solo está saludando o conversando, responde normalmente "
+    "como vendedor colombiano y NO uses herramientas.\n"
 )
-
 
 model, tokenizer = load(MODEL_PATH)
 
 def get_internal_knowledge(query, top_k=3):
     return f"Resultados de productos para: {query}"
 
+
 def create_order(product_name, quantity, price, customer_phone):
     return f"Orden creada: {quantity} x {product_name} por {price} para {customer_phone}"
 
+
 def generate_response_from_model(
-    user_message,
     model,
     tokenizer,
     max_tokens=DEFAULT_MAX_TOKENS,
@@ -46,7 +53,7 @@ def generate_response_from_model(
 
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT},
-        {"role": "user", "content": user_message},
+        *conversation
     ]
 
     chat_prompt = tokenizer.apply_chat_template(
@@ -64,7 +71,6 @@ def generate_response_from_model(
     )
 
     text = response.strip()
-    print(f"Model output: {text}")
 
     try:
         tool_call = json.loads(text)
@@ -75,8 +81,6 @@ def generate_response_from_model(
             if tool_name == "get_products":
 
                 query_tool = tool_call.get("query", "")
-                print(f"Tool call detectado: get_products('{query_tool}')")
-
                 knowledge = get_internal_knowledge(query_tool, top_k=top_k)
                 messages.append({"role": "assistant", "content": text})
                 messages.append(
@@ -88,7 +92,6 @@ def generate_response_from_model(
 
             elif tool_name == "create_order":
 
-                print("Tool call detectado: create_order")
                 order_status = create_order(
                     product_name=tool_call.get("product_name"),
                     quantity=tool_call.get("quantity"),
@@ -119,19 +122,15 @@ def generate_response_from_model(
             )
 
             text = final_response.strip()
-            print(f"Respuesta final: {text}")
-
-            return {"response": text, "status": "success"}
 
     except json.JSONDecodeError:
-        print("El modelo respondió texto normal.")
+        pass
 
-    return {"response": text, "status": "success"}
+    print(f"RESULT_TEXT={text}")
 
 
 if __name__ == "__main__":
-    result = generate_response_from_model(
-        "Hola, ¿cómo estás?",
+    generate_response_from_model(
         model,
         tokenizer
     )
