@@ -4,21 +4,24 @@ import torch
 import traceback
 import torchaudio
 from pathlib import Path
+import argparse
 from resemble_enhance.enhancer.inference import denoise, enhance as re_enhance
 from TTS.tts.configs.vits_config import VitsConfig
 from TTS.tts.models.vits import Vits
 from TTS.tts.layers.vits.networks import TextEncoder
 
 
+parser = argparse.ArgumentParser()
+parser.add_argument("--text", required=True, help="Frase a sintetizar")
+args = parser.parse_args()
+
+FRASES = [args.text]
 CKPT = "./vits_colombian/output/train5/best_model.pth"
 OUTPUTS = Path()
 OUTPUTS.mkdir(parents=True, exist_ok=True)
 NOISE_SCALE = 0.8
 NOISE_SCALE_W = 0.6
 LENGTH_SCALE = 1.5
-FRASES = [
-    "Estoy estudiando inteligencia artificial en KeepCoding, que cosa tan buena",
-]
 
 
 best_ckpt = Path(CKPT)
@@ -36,9 +39,6 @@ for parent in [
 
 if config_path_ft is None:
     raise FileNotFoundError("No se encontró config.json para el modelo")
-
-print(f"Checkpoint: {best_ckpt}")
-print(f"Config: {config_path_ft}")
 
 inf_config = VitsConfig()
 inf_config.load_json(str(config_path_ft))
@@ -91,7 +91,6 @@ def main():
         try:
 
             tokens = inf_model.tokenizer.text_to_ids(texto)
-
             x = torch.LongTensor(tokens).unsqueeze(0).to(DEVICE)
             x_lengths = torch.LongTensor([x.shape[1]]).to(DEVICE)
             lang_ids = torch.LongTensor([0]).to(DEVICE)
@@ -168,10 +167,8 @@ def main():
             out_path = OUTPUTS / f"resultado_{i+1}.wav"
             torchaudio.save(out_path, enhanced.unsqueeze(0), sr3)
             temp_path.unlink()
-            duracion = len(enhanced_np) / sr3
-
-            print(f"frase {i+1} - {out_path.name} ({duracion:.1f}s)")
-            print(texto)
+            
+            print(f"RESULT_PATH={out_path.resolve()}")
 
         except Exception:
 
