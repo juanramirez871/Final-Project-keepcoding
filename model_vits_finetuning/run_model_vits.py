@@ -16,7 +16,6 @@ OUTPUTS.mkdir(parents=True, exist_ok=True)
 NOISE_SCALE = 0.8
 NOISE_SCALE_W = 0.6
 LENGTH_SCALE = 1.5
-
 FRASES = [
     "Estoy estudiando inteligencia artificial en KeepCoding, que cosa tan buena",
 ]
