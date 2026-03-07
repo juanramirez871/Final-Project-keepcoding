@@ -45,6 +45,7 @@ def call_model_llama(memory_llama: list, message: str):
         cwd=str(folder_llama)
     )
 
+    print(result.stdout)
     if result.returncode != 0:
         print(result.stderr)
         raise HTTPException(status_code=500, detail="Error al generar el texto")
