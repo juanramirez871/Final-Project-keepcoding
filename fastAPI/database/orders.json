@@ -1,29 +1,29 @@
 [
     {
         "id": 1,
-        "product_name": "Producto A",
-        "description": "Descripción del Producto A",
+        "product_name": "Iphone 17",
+        "description": "Celular nuevo color negro",
         "price": 100,
         "customer_phone": 1234567890,
         "quantity": 2,
-        "date": "2023-12-15"
+        "date": "2026-02-15"
     },
     {
         "id": 2,
-        "product_name": "Producto B",
-        "description": "Descripción del Producto B",
+        "product_name": "Televisor Samsung",
+        "description": "27 pulgadas pantalla plana",
         "price": 200,
         "customer_phone": 2345678901,
         "quantity": 1,
-        "date": "2023-12-15"
+        "date": "2026-02-15"
     },
     {
         "id": 3,
-        "product_name": "Producto C",
-        "description": "Descripción del Producto C",
+        "product_name": "Macbook pro",
+        "description": "14 pulgadas color gris plateado",
         "price": 300,
         "customer_phone": 3456789012,
         "quantity": 3,
-        "date": "2023-12-15"
+        "date": "2026-02-15"
     }
 ]

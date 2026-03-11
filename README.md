@@ -81,13 +81,17 @@ El modelo tiene 3 opciones de generacion de respuesta
 
 1. Generar texto normal conversacional
 
+![text](assets/4.png)
+
 2. Obtener productos: el modelo dispara la accion RAG, donde el sistema consulta una base de conocimiento vectorial para recuperar información relevante que se añade al contexto del modelo.
+
+![RAG](assets/3.png)
 
 3. Crear Orden: el modelo dispara la accion de crear una orden en el sistema, esto pasa cuando el modelo detecta que la venta ya se cerro
 
-El resultado es la respuesta textual del asistente.
+![orden](assets/9.png)
 
-![text](assets/4.png)
+El resultado es la respuesta textual del asistente.
 
 ### Generación del audio de la respuesta
 
