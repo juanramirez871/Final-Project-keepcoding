@@ -53,7 +53,7 @@ Usé dos ambientes
 
 ![diagrama](assets/8.jpg)
 
-##### Recepción de la llamada
+#### Recepción de la llamada
 
 El flujo comienza con una llamada entrante que llega al sistema a través del protocolo SIP/RTP. Esta llamada es gestionada por Asterisk (PBX), que es el encargado de manejar la comunicación telefónica.
 
@@ -66,14 +66,14 @@ El servidor ARI recibe los paquetes RTP provenientes de Asterisk y procesa el au
 
 En este punto el audio del usuario se envía a un sistema de speech-to-text (Whisper) que convierte el audio de la llamada en texto del usuario.
 
-##### Procesamiento del mensaje del usuario
+#### Procesamiento del mensaje del usuario
 
 El texto generado se envía al endpoint /assistant del FastAPI principal.
 Este endpoint actúa como orquestador de todo el flujo, coordinando los diferentes servicios del sistema.
 
 El endpoint /assistant recibe el texto del usuario y lo envía a un segundo servicio FastAPI encargado de generar la respuesta con un modelo de lenguaje.
 
-##### Generación de respuesta con modelo de lenguaje
+#### Generación de respuesta con modelo de lenguaje
 
 El segundo servicio FastAPI contiene el modelo Meta LLaMA con el Fine-tuning, encargado de generar la respuesta conversacional.
 
@@ -81,7 +81,9 @@ Antes de generar la respuesta final, el modelo utiliza una arquitectura RAG, don
 
 El resultado es la respuesta textual del asistente.
 
-##### Generación del audio de la respuesta
+![text](assets/4.jpg)
+
+#### Generación del audio de la respuesta
 
 Una vez generada la respuesta textual, esta se envía a un tercer servicio FastAPI encargado de convertir el texto en voz.
 
@@ -92,7 +94,9 @@ La razón de esta separación es que las versiones de dependencias de las librer
 
 Para evitar problemas de compatibilidad y mantener un entorno estable, cada modelo se desplegó en servicios independientes con sus propios entornos virtuales.
 
-##### Respuesta en la llamada
+![audio](assets/5.jpg)
+
+#### Respuesta en la llamada
 
 El archivo de audio generado se envía nuevamente al servidor ARI, que lo retransmite a Asterisk.
 
