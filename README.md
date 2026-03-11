@@ -81,7 +81,7 @@ Antes de generar la respuesta final, el modelo utiliza una arquitectura RAG, don
 
 El resultado es la respuesta textual del asistente.
 
-![text](assets/4.jpg)
+![text](assets/4.png)
 
 #### Generación del audio de la respuesta
 
@@ -94,7 +94,7 @@ La razón de esta separación es que las versiones de dependencias de las librer
 
 Para evitar problemas de compatibilidad y mantener un entorno estable, cada modelo se desplegó en servicios independientes con sus propios entornos virtuales.
 
-![audio](assets/5.jpg)
+![audio](assets/5.png)
 
 #### Respuesta en la llamada
 
